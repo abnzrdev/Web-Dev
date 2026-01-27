@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: A classy gallery</title>
+        <style>
+            body {
+                font-family: cursive;
+                background-color: #f8f8ff;
+            }
+            
+            .image-small {
+                width: 120px;
+                border-radius: 10px;
+            }
+            .image-medium {
+                width: 180px;
+                border-radius: 15px;
+            }
+            .black-frame {
+                border: 8px double rgb(38, 38, 38);
+                box-shadow: 2px 2px 8px #222;
+            }
+            .gold-frame {
+                border: 10px ridge rgb(255, 183, 0);
+                box-shadow: 2px 2px 8px #bfa100;
+            }
+            .silver-frame {
+                border: 10px groove rgb(204, 204, 204);
+                box-shadow: 2px 2px 8px #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>A Classy Animal Gallery</h1>
+        
+        <img class = "image-small black-frame" src="https://www.kasandbox.org/programming-images/animals/cat.png" alt="Cat">
+        <img class = "image-medium gold-frame" src="https://www.kasandbox.org/programming-images/animals/fox.png" alt="Fox">
+        <img class = "image-medium silver-frame" src="https://www.kasandbox.org/programming-images/animals/penguins.png" alt="Penguins">
+
+
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Challenge: Classes of elements</title>
+    <style>
+        /* Word colors in the paragraph */
+        .metal {
+            color: red;
+        }
+        .non-metal {
+            color: blue;
+        }
+        .semi-metal {
+            color: purple;
+        }
+
+        /* Heading styles */
+        h2.metal {
+            background-color: red;
+            color: white;
+        }
+        h2.non-metal {
+            background-color: blue;
+            color: white;
+        }
+        h2.semi-metal {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The Periodic Table of Elements</h1>
+
+    <p>
+        There are three broad classes of elements in chemistry:
+        <strong class="metal">metals</strong>,
+        <strong class="non-metal">non-metals</strong>,
+        and <strong class="semi-metal">semi-metals</strong>.
+    </p>
+
+    <h2 class="metal">Metals</h2>
+    <ul>
+        <li>Solid at room temperature</li>
+        <li>Good conductors of electricity</li>
+        <li>Ductile and shiny</li>
+        <li>Malleable</li>
+    </ul>
+
+    <h2 class="non-metal">Non-metals</h2>
+    <ul>
+        <li>Brittle</li>
+        <li>Poor conductors of heat and electricity</li>
+    </ul>
+
+    <h2 class="semi-metal">Semi-metals (Metalloids)</h2>
+    <ul>
+        <li>Partially conduct electricity</li>
+        <li>Have properties of both metals and non-metals</li>
+    </ul>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Descendants of Khan</title>
+        <style>
+            .emperor {
+                font-family: cursive;
+            }
+            
+            .reign {
+                font-family: monospace;
+            }
+table .reign{
+            table .emperor {
+    background-color: #fffbe0;
+}
+table .reign{
+    background-color:#ffe066;
+}
+        </style>
+    </head>
+    <body>
+
+    <h1>Famous Descendants of Khan</h1>
+    
+    <p><strong class="emperor">Genghis Khan</strong> (<span class="reign">1206-1227</span>) was an emperor who had many sons and daughters, and many famous emperors are descended from him. (But not Sal Khan!)</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Reign</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="emperor">Ögedei Khan</td>
+                <td class="reign">1229-1241</td>
+            </tr>
+            <tr>
+                <td class="emperor">Kublai Khan</td>
+                <td class="reign">1260-1294</td>
+            </tr>
+            <tr>
+                <td class="emperor">Temür Khan</td>
+                <td class="reign">1294-1307</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Grouped animals</title>
+        <style>
+           p {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 150px;
+}
+
+h1, h2 {
+    font-family: fantasy;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 3px;
+}
+
+h1:hover, h2:hover {
+    background-color: rgb(248, 255, 199);
+}
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>Unusual Animal Group Names</h1>
+        
+        <p>For many species of animals, there are special names for groups of them—like a flock of birds. Here are a few you might not know.</p>
+        
+        <h2>A skulk of foxes</h2>
+
+        <p>Also called a "leash."</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/fox.png">
+        <img src="https://www.kasandbox.org/programming-images/animals/fox.png">
+        
+        <h2>A clowder of cats</h2>
+        
+        <p>Also called a "pounce", "glaring", "kindle", or "clutter."</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/cat.png">
+        <img src="https://www.kasandbox.org/programming-images/animals/cat.png">
+        
+        <p>
+        <a href="http://en.wikipedia.org/wiki/List_of_animal_names">Learn more on Wikipedia</a>
+        </p>
+    </body>
+</html>
