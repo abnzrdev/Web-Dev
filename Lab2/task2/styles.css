@@ -1,9 +1,10 @@
-  body{
+    body{
                 margin: 0;
                 padding: 0;
                 height: 100vh;
                 width: 100vw;
                 display: flex;
+                                font-family: 'Nunito', sans-serif;
             }
             #left{
                 width: 51vw;
@@ -151,7 +152,7 @@
             border-width: 1px;
             border-radius: 30px;
             background-color: transparent;
-            border-color: w;
+            border-color: #af9494;
             font-family: 'Nunito', sans-serif;
             font-size: 16px;
             width: 100%;

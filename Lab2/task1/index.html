@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facebook Login</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,18 +12,18 @@
 <body>
     <div id="main_div">
         <div id="left_side">
-            <img id="face_book" src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-15.png">
+            <img id="face_book" src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-15.png" alt="Facebook">
             <p>Connect with friends and the world around you on Facebook.</p>
         </div>
 
         <div id="right_side">
             <div id="login_column">
-                <input type="text" placeholder="Email or phone number">
-                <input type="password" placeholder="Password">
-                <button id="Log_in">Log In</button>
+                <input type="text" placeholder="Email or phone number" aria-label="Email or phone number" autocomplete="username">
+                <input type="password" placeholder="Password" aria-label="Password" autocomplete="current-password">
+                <button id="Log_in" type="button">Log In</button>
                 <p id="forgot_password">Forgot password?</p>
                 <hr>
-                <button id="creating_account">Create new account</button>
+                <button id="creating_account" type="button">Create new account</button>
             </div>
 
             <p id="down_prompt">
