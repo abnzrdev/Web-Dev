@@ -1,0 +1,146 @@
+ body{
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f2f4f7;
+            color: #1c1e21;
+        }
+
+        #main_div{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* LEFT SIDE */
+        #left_side{
+            max-width: 500px;
+            width: 100%;
+            margin-right: 60px;
+        }
+
+        #face_book{
+            height: 47px;
+        }
+
+        #left_side p{
+            font-size: 28px;
+            line-height: 32px;
+            margin-top: 15px;
+        }
+
+        /* RIGHT SIDE */
+        #right_side{
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login_column{
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #0000001a, 0 8px 16px #0000001a;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login_column input{
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #dddfe2;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        #login_column input:focus{
+            outline: none;
+            border-color: #0866ff;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+
+        input::placeholder{
+            color: gray;
+        }
+
+        #Log_in{
+            width: 100%;
+            background-color: #0866ff;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #Log_in:hover{
+            background-color: #1877f2;
+        }
+
+        #forgot_password{
+            color: #385898;
+            font-size: 14px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        hr{
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: #dadde1;
+            margin: 20px 0;
+        }
+
+        #creating_account{
+            width: 100%;
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            line-height: 48px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #creating_account:hover{
+            background-color: #36a420;
+        }
+
+        #down_prompt{
+            font-size: 14px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+      
+        @media (max-width: 768px) {
+            #main_div{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #left_side{
+                margin: 0 0 30px 0;
+            }
+
+            #left_side p{
+                font-size: 22px;
+                line-height: 28px;
+            }
+
+            #face_book{
+                height: 40px;
+            }
+        }
