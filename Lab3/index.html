@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ToDo List</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <header>
-            <h2>ToDo List</h2>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <div id="main_div_body">
-            <section id="todo_list">
-                <div id="head"><h2>ToDo List</h2></div>
+<body>
+    <header>
+        <h2>ToDo List</h2>
+    </header>
 
-                <div id="main_div">
-                    <div id="adding_part">
-                        <label for="inputed_tasks" class="visually-hidden">New task</label>
-                        <input id="inputed_tasks" type="text" placeholder="New task" aria-label="New task">
-                        <button id="Add_btn" type="button">Add</button>
-                    </div>
+    <div id="main_div_body">
+        <section id="todo_list">
+            <div id="head">
+                <h2>ToDo List</h2>
+            </div>
 
-                    <div id="adding_asks" aria-live="polite">
-                        <!-- tasks will be injected here -->
-                    </div>
+            <div id="main_div">
+                <div id="adding_part">
+                    <label for="inputed_tasks" class="visually-hidden">New task</label>
+                    <input id="inputed_tasks" type="text" placeholder="New task" aria-label="New task">
+                    <button id="Add_btn" type="button">Add</button>
                 </div>
-            </section>
-        </div>
-        
-       <script src="script.js" defer></script>
-    </body>
+
+                <div id="adding_asks" aria-live="polite">
+                    <!-- tasks will be injected here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
 </html>
