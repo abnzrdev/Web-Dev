@@ -1,0 +1,94 @@
+  *{
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                background: black;
+                color: white;
+                margin: 0;
+                height: 60px;
+                padding-left: 40px;
+                display: flex;
+                align-items: center;
+            }
+            #todo_list{
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            #main_div_body{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                height: 90vh;
+            }
+            #todo_list{
+                height: 70%;
+            }
+            #inputed_tasks{
+                width: 450px;
+                height: 20px;
+                padding: 5px;
+            }
+            #main_div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            #Add_btn{
+                width: 60px;
+                height: 30px;
+            }
+            #adding_part{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+            #Add_btn{
+                background-color: rgb(22, 133, 202);
+                color: white;
+                border: none;
+                border-radius: 6px;
+            }
+            #add_one{
+                display: flex;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 97%;
+                justify-content: space-between;
+                align-items: center;
+                border: solid;
+                border-width: 1px;
+            }
+            #task_left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+            }
+            #adding_asks{
+                width: 100%;
+            }
+
+/* Improvements for new structure */
+.visually-hidden{
+    position: absolute !important;
+    height: 1px; width: 1px; overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+.task-item{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+}
+.task-left{ display:flex; gap:10px; align-items:center; }
+.task-right{ }
+p{ margin:0; }
