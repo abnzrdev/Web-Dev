@@ -1,0 +1,20 @@
+<div class="product-card">
+	<img [src]="product.image" [alt]="product.name" (error)="onImgError($event)" />
+	<h3>{{ product.name }}</h3>
+	<p class="description">{{ product.description }}</p>
+	<div class="meta">
+		<p class="price">{{ product.price | number }} KZT</p>
+		<p class="rating">⭐ {{ product.rating }}</p>
+	</div>
+	<div class="card-actions">
+		<a class="kaspi-link" [href]="product.link" target="_blank" rel="noopener">Open on Kaspi</a>
+		<div class="share-row">
+			<a class="share-btn wa" [href]="getWhatsAppLink()" target="_blank" rel="noopener">Share on WhatsApp</a>
+			<a class="share-btn tg" [href]="getTelegramLink()" target="_blank" rel="noopener">Share on Telegram</a>
+		</div>
+		<div style="display:flex;gap:8px;margin-top:8px;align-items:center;">
+			<button (click)="like()">❤ Like ({{ product.likes }})</button>
+			<button (click)="deleteItem()" style="background:#e03b3b;color:#fff;padding:6px 8px;border-radius:6px;border:none;">Delete</button>
+		</div>
+	</div>
+</div>

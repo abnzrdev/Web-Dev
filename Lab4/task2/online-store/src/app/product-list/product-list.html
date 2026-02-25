@@ -1,0 +1,15 @@
+<div class="product-list-page">
+  <header class="pl-header">
+    <h2>Products</h2>
+    <p class="pl-sub">Browse popular items — click a card to open Kaspi.</p>
+  </header>
+  <div *ngIf="products && products.length; else emptyBlock">
+    <div class="products-grid">
+      <app-product-card *ngFor="let product of products; trackBy: trackById" [product]="product" (delete)="onDelete($event)"></app-product-card>
+    </div>
+  </div>
+
+  <ng-template #emptyBlock>
+    <p style="text-align:center;margin-top:28px">No products in this category.</p>
+  </ng-template>
+</div>

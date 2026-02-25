@@ -1,0 +1,19 @@
+<main>
+  <section class="top-section ui-panel">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div class="brand">Astore</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="cat-btn" *ngFor="let c of categories" (click)="selectCategory(c.id)" [class.selected]="isSelected(c.id)">{{ c.name }}</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ui-panel">
+    <app-product-list [products]="selectedProducts"></app-product-list>
+  </section>
+
+  <footer class="app-footer">
+    <div>Astore — minimal TUI-styled product browser</div>
+    <div style="margin-top:6px;font-size:0.9rem;opacity:0.9">Built for Lab 5 • <a href="https://kaspi.kz/" target="_blank" rel="noopener">kaspi.kz</a></div>
+  </footer>
+</main>
