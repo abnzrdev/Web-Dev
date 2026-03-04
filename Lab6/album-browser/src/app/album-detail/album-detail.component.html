@@ -1,0 +1,34 @@
+<section class="album-detail-container">
+	<div class="album-card">
+		<h2>Album Details</h2>
+
+		<p *ngIf="isLoading" class="status-message">Loading album...</p>
+
+		<p *ngIf="!isLoading && message && !album" class="status-message error-message">
+			{{ message }}
+		</p>
+
+		<div *ngIf="!isLoading && album" class="form-content">
+			<p><strong>ID:</strong> {{ album.id }}</p>
+			<p><strong>User ID:</strong> {{ album.userId }}</p>
+
+			<label for="albumTitle">Title</label>
+			<input
+				id="albumTitle"
+				type="text"
+				[(ngModel)]="editedTitle"
+				placeholder="Enter album title"
+			/>
+
+			<p *ngIf="message" class="status-message">{{ message }}</p>
+
+			<div class="button-row">
+				<button type="button" (click)="saveAlbum()" [disabled]="isSaving">
+					{{ isSaving ? 'Saving...' : 'Save' }}
+				</button>
+				<button type="button" (click)="viewPhotos()">View Photos</button>
+				<button type="button" class="secondary" (click)="backToAlbums()">Back to Albums</button>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,66 @@
+.photos-container {
+	max-width: 1000px;
+	margin: 24px auto;
+	padding: 0 16px 20px;
+}
+
+h2 {
+	margin-bottom: 14px;
+}
+
+.status-message {
+	margin: 10px 0 14px;
+}
+
+.photos-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+	margin-bottom: 18px;
+}
+
+@media (min-width: 700px) {
+	.photos-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.photos-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.photo-card {
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	padding: 10px;
+	background: #ffffff;
+	text-align: center;
+}
+
+.photo-card img {
+	width: 100%;
+	max-width: 150px;
+	height: auto;
+	border-radius: 6px;
+}
+
+.photo-card p {
+	margin: 8px 0 0;
+	font-size: 0.9rem;
+	color: #374151;
+}
+
+button {
+	border: none;
+	background: #374151;
+	color: #ffffff;
+	padding: 8px 14px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #1f2937;
+}

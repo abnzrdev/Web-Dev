@@ -1,0 +1,15 @@
+<section class="photos-container">
+	<h2>Album Photos</h2>
+
+	<p *ngIf="isLoading" class="status-message">Loading photos...</p>
+	<p *ngIf="!isLoading && message" class="status-message">{{ message }}</p>
+
+	<div *ngIf="!isLoading && photos.length > 0" class="photos-grid">
+		<article *ngFor="let photo of photos" class="photo-card">
+			<img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+			<p>{{ photo.title }}</p>
+		</article>
+	</div>
+
+	<button type="button" (click)="backToAlbum()">Back to Album</button>
+</section>
