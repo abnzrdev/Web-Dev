@@ -6,7 +6,7 @@
 
 	<div *ngIf="!isLoading && photos.length > 0" class="photos-grid">
 		<article *ngFor="let photo of photos" class="photo-card">
-			<img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+			<img [src]="photo.thumbnailUrl" [alt]="photo.title" (error)="onImgError($event)" />
 			<p>{{ photo.title }}</p>
 		</article>
 	</div>

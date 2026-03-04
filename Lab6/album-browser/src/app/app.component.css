@@ -1,21 +1,30 @@
 nav {
-	display: flex;
-	gap: 18px;
-	align-items: center;
-	padding: 12px 18px;
-	background: #1f2937;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  width: min(100% - 24px, 1400px);
+  margin: 12px auto 0;
+  padding: 12px 18px;
+  background: #020402;
+  border-bottom: 1px solid #00ff41;
+  border-radius: 12px;
 }
 
 nav a {
-	color: #ffffff;
-	text-decoration: none;
+  color: #00ff41;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 nav a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.35);
 }
 
 nav a.active {
-	color: #fbbf24;
-	font-weight: 700;
+  color: #b7ffb7;
+  font-weight: 700;
+  background: rgba(0, 255, 65, 0.08);
 }

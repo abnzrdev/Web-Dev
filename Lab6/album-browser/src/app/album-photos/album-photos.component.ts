@@ -48,7 +48,11 @@ export class AlbumPhotosComponent implements OnInit {
 
     this.albumService.getAlbumPhotos(id).subscribe({
       next: (photos) => {
-        this.photos = photos;
+        this.photos = photos.map((photo) => ({
+          ...photo,
+          url: this.normalizePhotoUrl(photo.url, photo.id, 600),
+          thumbnailUrl: this.normalizePhotoUrl(photo.thumbnailUrl, photo.id, 150)
+        }));
         this.isLoading = false;
 
         if (photos.length === 0) {
@@ -69,6 +73,44 @@ export class AlbumPhotosComponent implements OnInit {
     }
 
     this.router.navigate(['/albums', this.albumId]);
+  }
+
+  onImgError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    if (!img) return;
+    if (img.dataset['fallbackApplied'] === 'true') {
+      return;
+    }
+
+    img.dataset['fallbackApplied'] = 'true';
+    img.onerror = null;
+    img.src = new URL('assets/placeholder.svg', document.baseURI).toString();
+    img.alt = 'placeholder image';
+  }
+
+  private normalizePhotoUrl(url: string, photoId: number, size: number): string {
+    if (!url) {
+      return this.picsumUrl(photoId, size);
+    }
+
+    const trimmedUrl = url.trim();
+    if (!trimmedUrl) {
+      return this.picsumUrl(photoId, size);
+    }
+
+    if (trimmedUrl.startsWith('//')) {
+      return `https:${trimmedUrl}`;
+    }
+
+    if (trimmedUrl.includes('via.placeholder.com')) {
+      return this.picsumUrl(photoId, size);
+    }
+
+    return trimmedUrl;
+  }
+
+  private picsumUrl(photoId: number, size: number): string {
+    return `https://picsum.photos/seed/${photoId}/${size}/${size}`;
   }
 
 }

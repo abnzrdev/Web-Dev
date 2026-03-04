@@ -8,7 +8,9 @@ import { Photo } from './models/photo.model';
   providedIn: 'root'
 })
 export class AlbumService {
-  private readonly baseUrl = 'https://jsonplaceholder.typicode.com';
+  // Use HTTP in local dev to avoid TLS/SSL handshake issues in this environment.
+  // In production, prefer HTTPS for security.
+  private readonly baseUrl = 'http://jsonplaceholder.typicode.com';
 
   constructor(private http: HttpClient) {}
 

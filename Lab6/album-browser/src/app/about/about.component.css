@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  width: min(100% - 24px, 1200px);
+  min-height: calc(100dvh - 120px);
+  margin: 18px auto 24px;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid #00ff41;
+  border-radius: 14px;
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  color: #00ff41;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 0;
+  line-height: 1;
+}
+
+h1::before {
+  content: "$ cat about.txt";
+  font-size: 1.8rem;
+  color: #00ff41;
+}
+
+h2 {
+  margin: 18px 0 10px;
+  font-size: 1.1rem;
+  color: rgba(0, 255, 65, 0.9);
+}
+
+p {
+  margin: 0 0 10px;
+  color: rgba(0, 255, 65, 0.86);
+}
+
+ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  color: rgba(0, 255, 65, 0.82);
+}
+
+li::before {
+  content: "> ";
+  position: absolute;
+  left: 0;
+  color: #00ff41;
+}

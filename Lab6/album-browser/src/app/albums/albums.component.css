@@ -1,66 +1,102 @@
 .albums-container {
-	max-width: 800px;
-	margin: 24px auto;
-	padding: 0 16px;
+  width: min(100% - 24px, 1300px);
+  min-height: calc(100dvh - 120px);
+  margin: 18px auto 24px;
+  padding: clamp(8px, 2vw, 18px);
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  color: #00ff41;
 }
 
 h2 {
-	margin-bottom: 16px;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
 }
 
 .loading {
-	font-size: 1rem;
+  font-size: 0.98rem;
+  color: rgba(0, 255, 65, 0.9);
+  animation: loading-blink 1s step-end infinite;
 }
 
 .album-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .album-item {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-	padding: 12px 14px;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	margin-bottom: 10px;
-	background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 8px;
+  border-bottom: 1px solid #1a3a1a;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.album-item:hover {
+  background: rgba(0, 255, 65, 0.05);
 }
 
 .album-link {
-	display: flex;
-	gap: 10px;
-	text-decoration: none;
-	color: inherit;
-	flex: 1;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: #00ff41;
+  flex: 1;
 }
 
 .album-link:hover .album-title {
-	text-decoration: underline;
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.35);
 }
 
 .album-id {
-	color: #555;
-	min-width: 44px;
+  color: rgba(0, 255, 65, 0.55);
+  min-width: 44px;
+}
+
+.album-id::before {
+  content: "[";
+}
+
+.album-id::after {
+  content: "]";
 }
 
 .album-title {
-	color: #1f2937;
+  color: #00ff41;
 }
 
 .delete-button {
-	border: 1px solid #dc2626;
-	background: #dc2626;
-	color: #fff;
-	padding: 6px 12px;
-	border-radius: 6px;
-	cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #ff4444;
+  padding: 4px 8px;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+.delete-button::before {
+  content: "[x] ";
 }
 
 .delete-button:hover {
-	background: #b91c1c;
-	border-color: #b91c1c;
+  color: #ff6666;
+  text-shadow: 0 0 6px rgba(255, 68, 68, 0.45);
+}
+
+@keyframes loading-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
 }
