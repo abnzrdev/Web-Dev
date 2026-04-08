@@ -5,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100dvh;
-  background: #050805;
-  color: #00ff41;
+  background: #04070d;
+  color: #7dd3fc;
   font-family: Consolas, "Lucida Console", Monaco, monospace;
   font-size: 18px;
   line-height: 1.5;
@@ -15,7 +15,7 @@ body {
 body {
   background-image: radial-gradient(
     circle at top,
-    rgba(0, 255, 65, 0.08),
+    rgba(125, 211, 252, 0.1),
     rgba(0, 0, 0, 0) 45%
   );
 }

@@ -4,7 +4,7 @@
   margin: 18px auto 24px;
   padding: clamp(8px, 2vw, 18px);
   font-family: Consolas, "Lucida Console", Monaco, monospace;
-  color: #00ff41;
+  color: #FFC107;
 }
 
 h2 {
@@ -14,7 +14,7 @@ h2 {
 
 .loading {
   font-size: 0.98rem;
-  color: rgba(0, 255, 65, 0.9);
+  color: rgba(255, 193, 7, 0.9);
   animation: loading-blink 1s step-end infinite;
 }
 
@@ -36,24 +36,24 @@ h2 {
 }
 
 .album-item:hover {
-  background: rgba(0, 255, 65, 0.05);
+  background: rgba(255, 193, 7, 0.05);
 }
 
 .album-link {
   display: flex;
   gap: 10px;
   text-decoration: none;
-  color: #00ff41;
+  color: #FFC107;
   flex: 1;
 }
 
 .album-link:hover .album-title {
   text-decoration: none;
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.35);
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.35);
 }
 
 .album-id {
-  color: rgba(0, 255, 65, 0.55);
+  color: rgba(255, 193, 7, 0.55);
   min-width: 44px;
 }
 
@@ -66,7 +66,7 @@ h2 {
 }
 
 .album-title {
-  color: #00ff41;
+  color: #FFC107;
 }
 
 .delete-button {

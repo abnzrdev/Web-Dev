@@ -6,13 +6,13 @@ nav {
   width: min(100% - 24px, 1400px);
   margin: 12px auto 0;
   padding: 12px 18px;
-  background: #020402;
-  border-bottom: 1px solid #00ff41;
+  background: #02060f;
+  border-bottom: 1px solid #7dd3fc;
   border-radius: 12px;
 }
 
 nav a {
-  color: #00ff41;
+  color: #7dd3fc;
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 8px;
@@ -20,11 +20,11 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.35);
+  text-shadow: 0 0 8px rgba(125, 211, 252, 0.35);
 }
 
 nav a.active {
-  color: #b7ffb7;
+  color: #bae6fd;
   font-weight: 700;
-  background: rgba(0, 255, 65, 0.08);
+  background: rgba(125, 211, 252, 0.12);
 }

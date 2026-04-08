@@ -1,0 +1,96 @@
+:host {
+  display: block;
+  width: min(100% - 24px, 1200px);
+  min-height: calc(100dvh - 120px);
+  margin: 18px auto 24px;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid #7dd3fc;
+  border-radius: 14px;
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  color: #7dd3fc;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 0;
+  line-height: 1;
+}
+
+h1::before {
+  content: "cat plan.txt";
+  font-size: 1.8rem;
+  color: #7dd3fc;
+}
+
+h2 {
+  margin: 18px 0 10px;
+  font-size: 1.1rem;
+  color: rgba(125, 211, 252, 0.95);
+}
+
+p {
+  margin: 0 0 10px;
+  color: rgba(125, 211, 252, 0.9);
+}
+
+ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  color: rgba(125, 211, 252, 0.88);
+}
+
+li::before {
+  content: "> ";
+  position: absolute;
+  left: 0;
+  color: #7dd3fc;
+}
+
+.profile-section,
+.japan-section {
+  margin-top: 16px;
+}
+
+.profile-photo {
+  width: min(210px, 100%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid currentColor;
+  margin: 6px 0 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.japan-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.japan-grid img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .japan-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .japan-grid img {
+    max-width: none;
+    height: 180px;
+  }
+}

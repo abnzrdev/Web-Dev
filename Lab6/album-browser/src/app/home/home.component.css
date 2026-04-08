@@ -8,7 +8,7 @@
   padding: clamp(20px, 4vw, 40px) clamp(16px, 4vw, 40px);
   text-align: center;
   font-family: Consolas, "Lucida Console", Monaco, monospace;
-  color: #00ff41;
+  color: #7dd3fc;
 }
 
 h1 {
@@ -25,23 +25,23 @@ h1 {
 h1::after {
   content: "|";
   margin-left: 4px;
-  color: #00ff41;
+  color: #7dd3fc;
   animation: cursor-blink 0.8s step-end infinite;
 }
 
 p {
   margin: 0 0 10px;
-  color: rgba(0, 255, 65, 0.82);
+  color: rgba(125, 211, 252, 0.86);
   font-size: 0.98rem;
 }
 
 button {
   margin-top: 14px;
   padding: 9px 16px;
-  border: 1px solid #00ff41;
+  border: 1px solid #7dd3fc;
   border-radius: 10px;
   background: transparent;
-  color: #00ff41;
+  color: #7dd3fc;
   font-family: inherit;
   font-size: 0.96rem;
   letter-spacing: 0.04em;
@@ -56,8 +56,8 @@ button::before {
 }
 
 button:hover {
-  background: rgba(0, 255, 65, 0.1);
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.22);
+  background: rgba(125, 211, 252, 0.14);
+  box-shadow: 0 0 10px rgba(125, 211, 252, 0.24);
 }
 
 @keyframes typing {
